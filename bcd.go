@@ -9,7 +9,7 @@ func pow100(power byte) uint64 {
 	return res
 }
 
-func fromUint(value uint64, size int) []byte {
+func FromUint(value uint64, size int) []byte {
 	buf := make([]byte, size)
 	if value > 0 {
 		remainder := value
@@ -28,7 +28,7 @@ func fromUint(value uint64, size int) []byte {
 // If value > 99, function returns value for last two digits of source value
 // (Example: uint8(123) = uint8(0x23)).
 func FromUint8(value uint8) byte {
-	return fromUint(uint64(value), 1)[0]
+	return FromUint(uint64(value), 1)[0]
 }
 
 // Returns two-bytes array with uint16 value in BCD format
@@ -36,7 +36,7 @@ func FromUint8(value uint8) byte {
 // If value > 9999, function returns value for last two digits of source value
 // (Example: uint8(12345) = []byte{0x23, 0x45}).
 func FromUint16(value uint16) []byte {
-	return fromUint(uint64(value), 2)
+	return FromUint(uint64(value), 2)
 }
 
 // Returns four-bytes array with uint32 value in BCD format
@@ -44,7 +44,7 @@ func FromUint16(value uint16) []byte {
 // If value > 99999999, function returns value for last two digits of source value
 // (Example: uint8(1234567890) = []byte{0x23, 0x45, 0x67, 0x89}).
 func FromUint32(value uint32) []byte {
-	return fromUint(uint64(value), 4)
+	return FromUint(uint64(value), 4)
 }
 
 // Returns eight-bytes array with uint64 value in BCD format
@@ -52,7 +52,7 @@ func FromUint32(value uint32) []byte {
 // If value > 9999999999999999, function returns value for last two digits of source value
 // (Example: uint8(12233445566778899) = []byte{0x22, 0x33, 0x44, 0x55, 0x66, 0x77, 0x88, 0x99}).
 func FromUint64(value uint64) []byte {
-	return fromUint(value, 8)
+	return FromUint(value, 8)
 }
 
 func toUint(value []byte, size int) uint64 {
