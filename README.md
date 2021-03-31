@@ -2,7 +2,7 @@
 
 Go implementation of BCD conversion functions
 
-Usage
+## Usage
 
 ```go
 package main
