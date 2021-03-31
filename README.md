@@ -1,6 +1,4 @@
 # bcd
-[![Build Status](https://travis-ci.org/albenik/bcd.svg?branch=master)](https://travis-ci.org/albenik/bcd)
-[![GoDoc](https://godoc.org/github.com/albenik/bcd?status.svg)](https://godoc.org/github.com/albenik/bcd)
 
 Go implementation of BCD conversion functions
 
