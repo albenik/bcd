@@ -19,4 +19,6 @@ func main() {
 ```
 
 ## Documentation
-For more documentation see [package documentation](https://godoc.org/github.com/albenik/bcd)
+
+For more documentation see
+[package documentation](https://godoc.org/github.com/albenik/bcd)
